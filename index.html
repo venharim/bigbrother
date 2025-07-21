@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Big Brother Simulator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Big Brother Simulator</h1>
+    <form id="setup-form">
+      <label for="numPlayers">Number of Houseguests (max 16):</label>
+      <input type="number" id="numPlayers" name="numPlayers" min="2" max="16" required />
+      <div id="players-input"></div>
+      <button type="submit">Start Game</button>
+    </form>
+    <div id="game-area" style="display:none;">
+      <h2>Game Progress</h2>
+      <div id="game-log"></div>
+      <h2>Voting Chart</h2>
+      <table id="voting-chart">
+        <thead>
+          <tr>
+            <th>Week</th>
+            <th>HOH</th>
+            <th>Nominees</th>
+            <th>POV</th>
+            <th>Evicted</th>
+            <th>Votes</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
